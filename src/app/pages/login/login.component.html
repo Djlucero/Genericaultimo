@@ -1,0 +1,55 @@
+<div class=" content">
+        <div class="position-absolute top-50 
+        start-50 translate-middle mt-5 ml-3">
+        
+                <div class="login-box">
+                    <img class="avatar"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGHDhFxaSfQ0hqAPBKcrekwU5HjsvLhnAFCXQJxT8xZX0yryStqdoG7WKpxfTL0_yZ1XU&usqp=CAU"
+                      width="100" height="100"> Cadena de Tiendas La Generica <img class="avatar2"
+                      src="https://img.pixers.pics/pho_wat(s3:700/FO/76/28/76/9/700_FO7628769_ade9eaa1aec516d401be18ff370840dd.jpg,700,593,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,543,jpg)/vinilos-frambuesas.jpg.jpg"
+                      width="100" height="100" ><br>
+                      <h4>Bienvenidos</h4>
+                      
+                              
+                <input 
+                type="text" 
+                class="form-control" 
+                placeholder="Username" 
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                [(ngModel)]="user"
+                >
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" 
+                id="basic-addon1">
+                <i class="fas fa-key"></i>
+            </span>
+                <input type="password" 
+                class="form-control" 
+                placeholder="Password" 
+                aria-label="Password"
+                aria-describedby="basic-addon1"
+                [(ngModel)]="pass"
+                >
+            </div>
+            <div class="text-center">
+                <button class="btn btn-success btn-lg"
+                (click)="comparar()">
+                    Iniciar sesión
+                </button>
+                <div *ngIf="correcto==1"
+                class="alert alert-success 
+                animate__animated animate__bounceInLeft" 
+                role="alert">
+                    Acceso correcto
+                </div>
+                <div *ngIf="correcto==0" 
+                class="alert alert-danger 
+                animate__animated animate__bounceInLeft" 
+                role="alert">
+                    Nombre de usuario o contraseña incorrectos
+                </div>
+            </div>
+        </div>
+</div>

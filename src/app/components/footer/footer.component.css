@@ -1,0 +1,12 @@
+.footer{
+    background-color: #bad4d4;
+    width: 100%;
+    height: 80px;
+    bottom:0;
+    position: fixed;    
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+    transition: 0.5 all;
+    color:#000;
+    
+  }
