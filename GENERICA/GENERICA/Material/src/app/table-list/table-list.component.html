@@ -1,0 +1,86 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Adicionar Productos</h4>
+                        <p class="card-category"> Subir Archivo</p>
+                    </div>
+                    <div class="card-body">
+                        <input class="form-control" type="file" (change)="onChange($event)">
+
+                        <button (click)="onUpload()" class="btn btn-warning">
+                          Enviar
+                        </button>
+                        {{recibido}}
+                      </div>
+                      <div class="container">
+                        <h3 *ngFor="let dato of resultados; let i = index">
+                          Dato {{i}} obtuvo codigo {{dato[0]}}
+                        </h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Lista de Productos</h4>
+                       
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+
+                            <table class="table">
+                                <thead class=" text-primary">
+
+                                    <th>
+                                        Código Producto
+                                    </th>
+                                    <th>
+                                        Nombre Producto
+                                    </th>
+                                    <th>
+                                        IVA
+                                    </th>
+                                    <th>
+                                        NIT
+                                    </th>
+                                    <th>
+                                        Precio Compra
+                                    </th>
+                                    <th>
+                                        Precio Venta
+                                    </th>
+                                </thead>
+
+                                <tbody>
+                                    <tr *ngFor="let producto of contenido" class="">
+                                        <td>{{producto.codigoproducto}}</td>
+                                        <td>{{producto.ivacompra}}</td>
+                                        <td>{{producto.nitproveedor}}</td>
+                                        <td>{{producto.nombreproducto}}</td>
+                                        <td>{{producto.preciocompra}}</td>
+                                        <td>{{producto.precioventa}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
