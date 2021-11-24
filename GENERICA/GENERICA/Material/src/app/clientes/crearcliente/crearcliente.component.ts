@@ -1,20 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
-  selector: 'app-user-profile',
-  templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.css']
+  selector: 'app-crearcliente',
+  templateUrl: './crearcliente.component.html',
+  styleUrls: ['./crearcliente.component.scss']
 })
-export class UserProfileComponent implements OnInit {
+export class CrearclienteComponent implements OnInit {
 
   res: any;
   contenido: any;
   urlapi: string = "http://localhost:8080/api/cliente";
-  
+
   constructor(private objetohttp: HttpClient) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.res = this.objetohttp.get(this.urlapi);
     this.res.subscribe((data: any[]) => {
       this.contenido = data;
@@ -22,7 +23,6 @@ export class UserProfileComponent implements OnInit {
     }
     );
   }
-
   cedulacliente!: string; 
   nombrecliente!: string; 
   direccioncliente!: string;
@@ -49,5 +49,6 @@ export class UserProfileComponent implements OnInit {
 
      });
   }
+
 
 }

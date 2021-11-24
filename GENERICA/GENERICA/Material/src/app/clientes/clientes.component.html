@@ -1,0 +1,66 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+       
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <a class="btn btn-default" href="http://localhost:4200/#/clientes">Listar Clientes</a>
+          <a class="btn btn-success" href="http://localhost:4200/#/crearcliente">Adicionar Cliente</a>
+          <a class="btn btn-warning" href="http://localhost:4200/#/crearcliente">Actualizar Cliente</a>
+          <a class="btn btn-danger" href="http://localhost:4200/#/crearcliente">Eliminar Cliente</a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title ">Listado clientes</h4>
+
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+
+
+              <table class="table">
+                <thead class=" text-primary">
+
+                  <th>
+                    Cédula
+                  </th>
+                  <th>
+                    Nombre Completo
+                  </th>
+                  <th>
+                    Dirección
+                  </th>
+                  <th>
+                    Teléfono
+                  </th>
+                  <th>
+                    Email
+                  </th>
+
+                </thead>
+
+                <tbody>
+                  <tr *ngFor="let clientes of contenido" class="">
+                    <td>{{clientes.cedulacliente}}</td>
+                    <td>{{clientes.nombrecliente}}</td>
+                    <td>{{clientes.direccioncliente}}</td>
+                    <td>{{clientes.telefonocliente}}</td>
+                    <td>{{clientes.emailcliente}}</td>
+
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
