@@ -10,6 +10,9 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { ClientesComponent } from '../../clientes/clientes.component';
 import { CrearclienteComponent } from '../../clientes/crearcliente/crearcliente.component';
+import { BuscarclienteComponent } from '../../clientes/buscarcliente/buscarcliente.component';
+import { ActulizarclienteComponent } from '../../clientes/actulizarcliente/actulizarcliente.component';
+import { EliminarclienteComponent } from '../../clientes/eliminarcliente/eliminarcliente.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -54,7 +57,7 @@ export const AdminLayoutRoutes: Routes = [
     //         component: UpgradeComponent
     //     }]
     // }
-    { path: 'dashboard',      component: DashboardComponent },
+    { path: '',      component: DashboardComponent },
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: TableListComponent },
     { path: 'typography',     component: TypographyComponent },
@@ -64,4 +67,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'clientes',       component: ClientesComponent },
     { path: 'crearcliente',   component: CrearclienteComponent },
+    { path: 'actulizarcliente',   component: ActulizarclienteComponent },
+    { path: 'eliminarcliente',   component: EliminarclienteComponent },
+    { path: 'buscarcliente',   component: BuscarclienteComponent },
 ];
+

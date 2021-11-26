@@ -1,0 +1,49 @@
+
+.login{
+  padding: 2em;
+  border-radius: 15px;
+  background-color: #ffffff75 ;
+
+}
+
+
+.titulologin{
+  color: rgb(39, 38, 38);
+  font-size: 30px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+
+.links{
+  transition: 0.5 all;
+}
+.links:hover{
+  font-weight: bolder;
+  transition: 0.5 all;
+}
+
+.tablax{
+    background-color: white;
+}
+
+.avatar{
+  width: 100px; 
+  height:100px;
+  position: absolutel;
+  border-radius: 100px;
+  top: 10px;
+  left: 720px;
+  }
+
+.avatar {
+  z-index: 3;
+}  
+
+.avatar2{
+  width: 100px; 
+  height:100px;
+  position: absolutel;
+  border-radius: 100px;
+  top: 20px;
+  left: 720px;
+  }

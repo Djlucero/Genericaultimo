@@ -1,0 +1,64 @@
+
+
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+         
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <a class="btn btn-default" href="http://localhost:4200/#/clientes">Listar Clientes</a>
+            <a class="btn btn-success" href="http://localhost:4200/#/crearcliente">Adicionar Cliente</a>
+            <a class="btn btn-warning" href="http://localhost:4200/#/crearcliente">Actualizar Cliente</a>
+            <a class="btn btn-danger" href="http://localhost:4200/#/eliminarcliente">Eliminar Cliente</a>
+            <a class="btn btn-info" href="http://localhost:4200/#/buscarcliente">Buscar Clientes</a> 
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+     
+        <div *ngIf="correcto==1" class="alert alert-danger 
+        animate__animated animate__bounceInLeft" role="alert">
+          Cliente Eliminado con Exito!
+        </div>
+      </div>
+  
+  
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Eliminar Cliente</h4>
+  
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="row">
+                  <div class="col-md-6">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder=" Cédula " type="text" [(ngModel)]="cedulacliente">
+  
+                    </mat-form-field>
+                  </div>
+                   
+                </div>
+                                
+                <button (click)="deleteData()" mat-raised-button class="btn btn-danger pull-right">Eliminar</button>
+                <div class="clearfix"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-profile">
+            <div class="card-avatar">
+              <a href="javascript:void(0)">
+                <img class="img" src="./assets/img/faces/marc.jpg" />
+              </a>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

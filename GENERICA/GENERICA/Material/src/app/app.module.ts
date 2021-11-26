@@ -22,7 +22,9 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { CrearComponent } from './user-profile/crear/crear.component';
+import { EliminarclienteComponent } from './clientes/eliminarcliente/eliminarcliente.component';
+
+
 
 
 
@@ -42,6 +44,9 @@ import { CrearComponent } from './user-profile/crear/crear.component';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    
+    
+    
     
    
   ],

@@ -7,6 +7,9 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { ClientesComponent } from '../../clientes/clientes.component';
 import { CrearclienteComponent } from '../../clientes/crearcliente/crearcliente.component';
+import { ActulizarclienteComponent } from '../../clientes/actulizarcliente/actulizarcliente.component';
+import { EliminarclienteComponent } from '../../clientes/eliminarcliente/eliminarcliente.component';
+import { BuscarclienteComponent } from '../../clientes/buscarcliente/buscarcliente.component';
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
@@ -38,6 +41,9 @@ import {MatSelectModule} from '@angular/material/select';
     UserProfileComponent,
     ClientesComponent,
     CrearclienteComponent,
+    ActulizarclienteComponent,
+    BuscarclienteComponent,
+    EliminarclienteComponent,
     TableListComponent,
     TypographyComponent,
     IconsComponent,

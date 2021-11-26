@@ -22,7 +22,7 @@ export class ClientesComponent implements OnInit {
   //variable contenedora de contenidos
   contenido: any;
   //url api get
-  urlapiGET: string = "http://localhost:8080/api/cliente";
+  urlapiGET: string = "http://localhost:8080/api/clientes";
 
   //FUNCIÓN DE CONTROL DE ERRORES
   handleError(error: HttpErrorResponse) {

@@ -28,12 +28,12 @@ export class CrearclienteComponent implements OnInit {
   direccioncliente!: string;
   telefonocliente!: string;
   emailcliente!: string;
-  
+  correcto!: number;
 
   codigoRespuesta!: number;
   postData() {
       this.objetohttp.post<any>(
-      "http://localhost:8080/api/cliente",
+      "http://localhost:8080/api/clientes",
       {
         cedulacliente: this.cedulacliente,
         nombrecliente:this.nombrecliente,
@@ -45,10 +45,22 @@ export class CrearclienteComponent implements OnInit {
     
       { observe: 'response' }
     ).subscribe(response=>{
+
+    
+      
       this.codigoRespuesta=response.status;
+      if (this.codigoRespuesta === 201) {
+        this.correcto = 1;
+      }
+       this.cedulacliente="";
+       this.nombrecliente="";
+       this.direccioncliente="";
+       this.emailcliente="";
+       this.telefonocliente="";
 
      });
   }
+
 
 
 }
