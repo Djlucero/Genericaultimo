@@ -13,7 +13,7 @@ export class BuscarclienteComponent implements OnInit {
 
   res: any;
   contenido: any;
-  urlapi: string = "http://localhost:8080/api/cliente";
+  urlapi: string = "http://localhost:8080/api/clientes";
 
     constructor(private objetohttp: HttpClient) { }
 
@@ -66,7 +66,7 @@ export class BuscarclienteComponent implements OnInit {
     
       
       this.codigoRespuesta=response.status;
-      if (this.codigoRespuesta === 201) {
+      if (this.codigoRespuesta === 200) {
         this.correcto = 1;
       }
        this.cedulacliente="";
@@ -83,7 +83,7 @@ export class BuscarclienteComponent implements OnInit {
   buscarData() {
 
     
-    this.res = this.objetohttp.get("http://localhost:8080/api/clientes/cedula/"+this.cedulacliente).pipe(catchError(this.handleError));
+    this.res = this.objetohttp.get("http://localhost:8080/api/clientes/cedula/"+this.cedulacliente);
 
     //suscribe el archivo json y lo convierte   
     this.res.subscribe((datos: any[]) => {

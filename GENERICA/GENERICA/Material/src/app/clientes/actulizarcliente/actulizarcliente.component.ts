@@ -11,24 +11,11 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 export class ActulizarclienteComponent implements OnInit {
   res: any;
   contenido: any;
-  urlapi: string = "http://localhost:8080/api/cliente";
+  urlapi: string = "http://localhost:8080/api/clientes";
 
     constructor(private objetohttp: HttpClient) { }
 
-    handleError(error: HttpErrorResponse) {
-      let errorMessage = 'Error desconocido!';
-      if (error.error instanceof ErrorEvent) {
-        // Errores del lado del cliente
-        errorMessage = `Error: ${error.error.message}\n ${error.status}`;
-      } else {
-        // Errores del lado del servidor
-        errorMessage = `Codigo de Error: ${error.status} \nMensaje: ${error.message}`;
-      }
-      //MOSTRANDO UN ERROR EN UNA ALERTA
-      //window.alert(errorMessage);
-      return throwError(errorMessage);
-    }
-  
+      
 
   ngOnInit(): void {
     this.res = this.objetohttp.get(this.urlapi);
@@ -82,13 +69,20 @@ export class ActulizarclienteComponent implements OnInit {
   buscarData() {
 
     
-    this.res = this.objetohttp.get("http://localhost:8080/api/clientes/cedula/"+this.cedulacliente).pipe(catchError(this.handleError));
+    this.res = this.objetohttp.get("http://localhost:8080/api/clientes/cedula/"+this.cedulacliente);
 
     //suscribe el archivo json y lo convierte   
     this.res.subscribe((datos: any[]) => {
       this.contenido = datos;
       console.log(this.contenido);
-      
+      this.Idcliente=this.contenido [0].id;
+      this.nombrecliente=this.contenido [0].nombrecliente;
+      this.cedulacliente=this.contenido [0].cedulacliente;
+      this.direccioncliente=this.contenido [0].direccioncliente;
+      this.telefonocliente=this.contenido [0].telefonocliente;
+      this.emailcliente=this.contenido [0].emailcliente;
+      //console.log(this.nombrecliente)
+
     });
 
 
