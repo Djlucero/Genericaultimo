@@ -27,6 +27,9 @@ export class TableListComponent implements OnInit {
   //url api get
   urlapiGET: string = "http://localhost:8080/api/productos";
 
+
+  
+
   //FUNCIÓN DE CONTROL DE ERRORES
   handleError(error: HttpErrorResponse) {
     let errorMessage = 'Error desconocido!';
@@ -68,7 +71,6 @@ export class TableListComponent implements OnInit {
   }
 
   ///////////////// POST /////////////////////////////
-  codigoRespuesta: number = 0;
   res2: any;
 
   //lista que almacenara los resultados de la insercion de cada linea
@@ -77,10 +79,7 @@ export class TableListComponent implements OnInit {
   // Variable to store shortLink from api response
   file!: File; //variable para almacenar los datos
 
-  //variable de confimación de recepcion de archivo
-  recibido: boolean = false;
-
-  // En caso de seleccionar archivo, escojer el primer archivo
+    // En caso de seleccionar archivo, escojer el primer archivo
   onChange(event: any) {
     this.file = event.target.files[0];
   }
@@ -93,4 +92,3 @@ export class TableListComponent implements OnInit {
   }
 
 }
-

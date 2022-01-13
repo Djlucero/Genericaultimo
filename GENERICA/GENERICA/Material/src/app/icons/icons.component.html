@@ -1,29 +1,146 @@
-
-<div class="main-content">
-  <div class="container-fluid">
-      <div class="card card-plain">
-          <div class="card-header card-header-danger">
-              <h4 class="card-title">Material Design Icons</h4>
-              <p class="card-category">Handcrafted by our friends from
-                  <a target="_blank" href="https://fonts.google.com/icons">Google</a>
-              </p>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                  <div class="card-body">
-                      <div class="iframe-container d-none d-lg-block">
-                          <iframe src="https://material.io/design/iconography/system-icons.html#grid-and-keyline-shapes">
-                              <p>Your browser does not support iframes.</p>
-                          </iframe>
-                      </div>
-                      <div class="col-md-12 d-none d-sm-block d-md-block d-lg-none d-block d-sm-none text-center ml-auto mr-auto">
-                          <h5>The icons are visible on Desktop mode inside an iframe. Since the iframe is not working on Mobile and Tablets please visit the icons on their original page on Google. Check the
-                              <a href="https://fonts.google.com/icons" target="_blank">Material Icons</a>
-                          </h5>
-                      </div>
-                  </div>
-              </div>
-          </div>
+<br>
+<br>
+<div class="container">
+  
+    <img class="avatarcar"src="/assets/img/cebolla.jpg"width="100" height="100"/>
+    <img class="avatarcar"src="/assets/img/gene.jpg"width="100" height="100"/>
+          
+      <div class="container">
+       
+        <div *ngIf="correcto==1" class="alert alert-success 
+        animate__animated animate__bounceInLeft" role="alert">
+          Cliente Encontrado con Exito!
+        </div>
       </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Buscar Cliente</h4>
+  
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="row">
+                  <div class="col-md-4">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder=" Cédula " type="text" [(ngModel)]="cedulacliente">
+  
+                    </mat-form-field>
+                  </div>
+                   
+                </div>
+
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                  <input  matInput placeholder="Cliente" type="text" [(ngModel)]="nombrecliente">
+                </mat-form-field>
+                 
+                </div>
+
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                  <input  matInput placeholder="Consecutivo" type="text" [(ngModel)]="nombrecliente">
+                </mat-form-field>
+
+              </div>
+                                
+                 <button (click)="buscarData()"mat-raised-button class="btn btn-danger pull-right">Consultar</button>
+                <div class="clearfix"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Actualizar Cliente</h4>
+  
+            </div>
+            <div class="card-body">
+
+              <div class="container">
+       
+                <div *ngIf="correcto==2" class="alert alert-success 
+                animate__animated animate__bounceInLeft" role="alert">
+                  Cliente Actualizado con Exito!
+                </div>
+              </div>
+
+              <div *ngFor="let clientes of contenido">  
+                <div class="row" >
+                  <div class="col-md-12">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder=" Idcliente " type="hidden" [(ngModel)]="Idcliente">
+  
+                    </mat-form-field>
+                  </div> </div>
+                <div class="row" >
+                  <div class="col-md-4">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder=" Cédula " type="text" [(ngModel)]="cedulacliente">
+  
+                    </mat-form-field>
+                  </div>
+  
+                  <div class="col-md-4">
+                    <mat-form-field class="example-full-width">
+                    <input  matInput placeholder="Cliente" type="text" [(ngModel)]="nombrecliente">
+                  </mat-form-field>
+                   
+                  </div>
+
+                  <div class="col-md-4">
+                    <mat-form-field class="example-full-width">
+                    <input  matInput placeholder="Consecutivo" type="text" [(ngModel)]="consecutivocliente">
+                  </mat-form-field>
+
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="codigo Producto" type="text" [(ngModel)]="direccioncliente">
+                      
+                    </mat-form-field>
+                  </div>
+                  <div class="col-md-3">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Nombre Producto" type="text" [(ngModel)]="telefonocliente">
+                     
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Cantidad" type="cantidad" [(ngModel)]="emailcliente">
+                      
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Valor Total" type="valor" [(ngModel)]="emailcliente">
+                        
+                      </mat-form-field>
+                    </div>
+                  </div>
+
+                <br>
+                <br>
+
+  
+               
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
   </div>
-</div>
+  

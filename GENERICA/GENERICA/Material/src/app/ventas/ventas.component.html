@@ -1,0 +1,305 @@
+<br>
+<br>
+<div class="container">
+  <img class="avatar3"src="/assets/img/cebolla.jpg"width="100" height="100"/>
+  <img class="avatar3"src="/assets/img/gene.jpg"width="100" height="100"/>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+  
+                 </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-4"> 
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Seleccionar Ciudad</h4>
+  
+            </div>
+            <div class="card-body">
+             
+                <div class="row">
+                  <div class="col-md-12">
+                    
+                      
+     
+                      <select [(ngModel)]="Ciudad" class="example-full-width " (change)="buscarConsolidado()">
+                        <option value="Bogotá">Bogotá</option>
+                        <option value="Cali">Cali</option>
+                        <option value="Medellín">Medellín</option>
+                        
+                      </select>
+                      <input matInput placeholder="" type="hidden" [(ngModel)]="totalventasciudad">
+                      <input matInput placeholder=" " type="hidden" [(ngModel)]="Idciudad">
+                  </div>
+                  
+                </div>
+                                
+                
+                <div class="clearfix"></div>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-3"> 
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Consecutivo</h4>
+  
+            </div>
+            <div class="card-body">
+             
+                <div class="row">
+                  <div class="col-md-12">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder=" Consecutivo " type="text" [(ngModel)]="consecutivobd">
+  
+                    </mat-form-field>
+                  </div>
+                   
+                </div>
+                                
+                <div class="clearfix"></div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+           <div class="row">
+        <div class="col-md-6"> 
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Buscar Cliente</h4>
+  
+            </div>
+            <div class="card-body">
+             
+                <div class="row">
+                  <div class="col-md-8">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder=" Cédula " type="text" [(ngModel)]="cedulacliente">
+  
+                    </mat-form-field>
+                  </div>
+                  <div class = "col-md-4">
+                  <button (click)="buscarData()" mat-raised-button class="btn btn-danger pull-right">Buscar</button> 
+                </div>
+                </div>
+                                
+                
+                <div class="clearfix"></div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6"> 
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title"> Cliente</h4>
+  
+            </div>
+            <div class="card-body">
+             
+                <div class="row">
+                  <div class="col-md-12">
+                    <mat-form-field class="example-full-width">
+                      <input  matInput placeholder="Nombre" type="text" [(ngModel)]="nombrecliente">
+  
+                    </mat-form-field>
+                  </div>
+                   
+                </div>
+                                
+                 <div class="clearfix"></div>
+              
+            </div>
+          </div>
+        </div>
+             </div>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-danger">
+              
+  
+            </div>
+            <div class="card-body">
+
+              <div class="container">
+                <div class="table-responsive">
+
+
+                  <table class="table">
+                    <thead class=" text-primary">
+    
+                      <th>
+                        Cod.Producto
+                      </th>
+                      <th>
+                        Nombre Producto
+                      </th>
+                      <th>
+                        Cantidad
+                      </th>
+                      <th>
+                        Valor Total
+                      </th>
+                         
+                    </thead>
+    
+                    <tbody>
+                      <tr >
+                        <td>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder=" " type="text" [(ngModel)]="codigoproducto">
+            
+                              </mat-form-field>
+                            </div>
+                            <div class = "col-md-4">
+                            <button (click)="buscarProducto()" mat-raised-button class="btn btn-danger pull-right">Consultar</button> 
+                          </div>
+                          </div>
+
+                        </td>
+                        <td>
+                          <input  matInput placeholder=" " type="text" [(ngModel)]="nombreproducto">
+                          <input  matInput placeholder=" "  type="hidden" [(ngModel)]="valorunitario">
+                        </td>
+                        <td>
+                          <input (keyup)="calculo()" matInput placeholder=" " type="text" [(ngModel)]="cantidad">
+                        </td>
+                        <td>
+                          <input  matInput placeholder=" " type="text" [(ngModel)]="valortotalproducto">
+                        </td>
+    
+                        <tr >
+                          <td>
+                            <div class="row">
+                              <div class="col-md-8">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder=" " type="text" [(ngModel)]="codigoproducto1">
+              
+                                </mat-form-field>
+                              </div>
+                              <div class = "col-md-4">
+                              <button (click)="buscarProducto1()" mat-raised-button class="btn btn-danger pull-right">Consultar</button> 
+                            </div>
+                            </div>
+  
+                          </td>
+                          <td>
+                            <input  matInput placeholder=" " type="text" [(ngModel)]="nombreproducto1">
+                            <input  matInput placeholder=" "  type="hidden" [(ngModel)]="valorunitario2">
+                          </td>
+                          <td>
+                            <input (keyup)="calculo()" matInput placeholder=" " type="text" [(ngModel)]="cantidad1">
+                          </td>
+                          <td>
+                            <input  matInput placeholder=" " type="text" [(ngModel)]="valortotalproducto1">
+                          </td>
+                          <tr >
+                            <td>
+                              <div class="row">
+                                <div class="col-md-8">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder=" " type="text" [(ngModel)]="codigoproducto2">
+                
+                                  </mat-form-field>
+                                </div>
+                                <div class = "col-md-4">
+                                <button (click)="buscarProducto2()" mat-raised-button class="btn btn-danger pull-right">Consultar</button> 
+                              </div>
+                              </div>
+    
+                            </td>
+                            <td>
+                              <input  matInput placeholder="" type="text" [(ngModel)]="nombreproducto2">
+                              <input  matInput placeholder=""  type="hidden" [(ngModel)]="valorunitario2">
+                            </td>
+                            <td>
+                              <input (keyup)="calculo()" matInput placeholder="" type="text" [(ngModel)]="cantidad2">
+                            </td>
+                            <td>
+                              <input  matInput placeholder=" " type="text" [(ngModel)]="valortotalproducto2">
+                            </td>
+                            <td>
+                       </tr> 
+                      </tbody>
+                      </table>
+                     
+                      </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div *ngIf="correcto==1" class="alert alert-success 
+                animate__animated animate__bounceInLeft" role="alert">
+                  Venta Guardada con Exito!
+                </div>
+              </div>
+              <div class="col-md-4"> 
+                <table class="table">
+                  <tbody>
+                 <tr>
+                  <td>
+                  </td>
+                  <td>
+                   </td>
+                  <td>
+                    Total Venta
+                    <br>
+                    Total Iva
+                    <br>
+                    Total con Iva
+                  </td>
+                  <td>
+                    <input  matInput placeholder="" type="text" [(ngModel)]="totalventa">
+                    <input  matInput placeholder="" type="text" [(ngModel)]="ivacompra">
+                    <input  matInput placeholder="" type="text" [(ngModel)]="totalconiva">
+                  </td>
+                  
+                </tr> 
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td> 
+                    <button (click)="confirmarventa(); guardarconsolidado()" mat-raised-button class="btn btn-danger pull-right">confirmar</button>   
+                  </td>
+                    <button (click)="reload()"i class="btn btn-danger pull-right">Recargar pagina
+                    </button>
+                
+                </tr>
+                 </tbody>
+                </table>
+              </div>
+            </div>
+                       
+                            
+        
+                                
+                                
+                             
+    
+                        
+
+            
+             
+                
+                
+             
+
+             
+         
+  
+     
+
+ 

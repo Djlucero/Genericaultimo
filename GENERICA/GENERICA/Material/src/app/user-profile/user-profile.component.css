@@ -1,4 +1,11 @@
-
+.avatarcar{
+  width: 100px; 
+  height:100px;
+  position:-ms-page;
+  top: 10px;
+  left: 720px;
+  }
+  
 .login{
   padding: 2em;
   border-radius: 15px;

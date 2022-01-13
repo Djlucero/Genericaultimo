@@ -23,6 +23,12 @@ import {
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { EliminarclienteComponent } from './clientes/eliminarcliente/eliminarcliente.component';
+import { ReportesComponent } from './reportes/reportes.component';
+import { ConsolidacionComponent } from './consolidacion/consolidacion.component';
+import { VentaxclienteComponent } from './reportes/ventaxcliente/ventaxcliente.component';
+import { ListaclienteComponent } from './reportes/listacliente/listacliente.component';
+
+
 
 
 
@@ -44,6 +50,12 @@ import { EliminarclienteComponent } from './clientes/eliminarcliente/eliminarcli
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    ReportesComponent,
+    ListaclienteComponent,
+  
+   
+    
+ 
     
     
     

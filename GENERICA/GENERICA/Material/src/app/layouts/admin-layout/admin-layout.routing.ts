@@ -8,11 +8,16 @@ import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
+import { VentasComponent } from '../../ventas/ventas.component';
 import { ClientesComponent } from '../../clientes/clientes.component';
 import { CrearclienteComponent } from '../../clientes/crearcliente/crearcliente.component';
 import { BuscarclienteComponent } from '../../clientes/buscarcliente/buscarcliente.component';
+import { ReportesComponent } from '../../reportes/reportes.component';
 import { ActulizarclienteComponent } from '../../clientes/actulizarcliente/actulizarcliente.component';
 import { EliminarclienteComponent } from '../../clientes/eliminarcliente/eliminarcliente.component';
+import { VentaxclienteComponent } from '../../reportes/ventaxcliente/ventaxcliente.component';
+import { ListaclienteComponent } from '../../reportes/listacliente/listacliente.component';
+import { ConsolidacionComponent } from '../../consolidacion/consolidacion.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -70,5 +75,9 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'actulizarcliente',   component: ActulizarclienteComponent },
     { path: 'eliminarcliente',   component: EliminarclienteComponent },
     { path: 'buscarcliente',   component: BuscarclienteComponent },
+    { path: 'ventas',   component: VentasComponent },
+    { path: 'reportes',   component: ReportesComponent },
+    { path: 'ventaxcliente',   component: VentaxclienteComponent },
+    { path: 'listacliente',   component: ListaclienteComponent },
+    { path: 'consolidacion',   component: ConsolidacionComponent },
 ];
-

@@ -27,12 +27,20 @@
                         <button (click)="onUpload()" class="btn btn-warning">
                           Enviar
                         </button>
-                        {{recibido}}
+                     
                       </div>
                         <div class="container">
-                        <h3 *ngFor="let dato of resultados; let i = index">
-                          Dato {{i}} obtuvo codigo {{dato[0]}}cd
-                        </h3>
+                            <h3 *ngFor="let dato of resultados; let i = index">
+                                <div class="alert alert-success" role="alert" *ngIf="dato==201">
+                                  Dato {{i}} obtuvo codigo {{dato}}: Dato insertado correctamente
+                                </div>
+                                <div class="alert alert-success" role="alert" *ngIf="dato==500">
+                                  Dato {{i}} obtuvo codigo {{dato}}: Error del servidor, comuniquese con el administrador
+                                </div>
+                                <div class="alert alert-success" role="alert" *ngIf="dato==400 || dato==404">
+                                  Dato {{i}} obtuvo codigo {{dato}}: Error  en la solicitud
+                                </div>
+                              </h3>
 
                     </div>
                 </div>

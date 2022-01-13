@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import {Router} from '@angular/router';
@@ -9,10 +9,11 @@ import {Router} from '@angular/router';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
+
+
   constructor(private toastr: ToastrService, private router: Router) { 
      
   }
-
 
 
   // login
@@ -29,7 +30,7 @@ export class UserProfileComponent implements OnInit {
         this.correcto = 1;
         this.showNotification('top', 'right',1);
 
-        this.router.navigate(['/clientes'])
+        this.router.navigate(['/dashboard'])
       } else {
         this.correcto = 0;
         this.showNotification('top', 'right',2);
